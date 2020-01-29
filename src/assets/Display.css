@@ -1,0 +1,17 @@
+.PositionDisplay {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.icon-lat {
+  color: blue;
+}
+
+.icon-long {
+  color: red;
+}
+
+.icon-time {
+  color: purple;
+}
