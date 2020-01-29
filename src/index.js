@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import ConsoleTest from "./components/ConsoleTest";
+import TestGeo from "./components/TestGeo";
+import PositionDisplay from "./components/PositionDisplay";
+//import ReverseGeo from "./components/ReverseGeo";
+import DataParser from "./components/DataParser";
+import NearestNumber from "./components/NearestNumber";
 
 class App extends React.Component {
   constructor(props) {
@@ -48,10 +52,20 @@ class App extends React.Component {
     ) {
       return (
         <div>
-          <div>Latitude: {this.state.latitude}</div>
-          <div>Longitude: {this.state.longitude}</div>
-          <div>Timestamp: {this.state.timestamp}</div>
-          <ConsoleTest />
+          <PositionDisplay
+            latitude={this.state.latitude}
+            longitude={this.state.longitude}
+            timestamp={this.state.timestamp}
+          />
+          <DataParser
+            latitude={this.state.latitude}
+            longitude={this.state.longitude}
+          />
+          <TestGeo />
+          <NearestNumber
+            latitude={this.state.latitude}
+            longitude={this.state.longitude}
+          />
         </div>
       );
     } else {
